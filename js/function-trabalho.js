@@ -1,10 +1,13 @@
 
 //----------------------------
+
 var hex = null;
 var dec = null;
 var bin = null;
 var ascii = null;
+
 //----------------------------	
+	
 	function updateValue(value, exclude) {
 	  
 	  if (exclude != hex) {
@@ -27,43 +30,34 @@ var ascii = null;
 	
 	window.addEventListener('load', function() {
 	 
+		//mudar codigos para manual
 
 
-	  hex = document.querySelector('.hex.input');
-	  hex.value = 0;
-	  
-	  hex.addEventListener('input', function() {
-	    updateValue(parseInt(hex.value, 16), hex);
-	  
-
-	  }, false);
+		hex = document.querySelector('.hex.input');
+		hex.value = 0;
+		
+		hex.addEventListener('input', function() {
+		updateValue(parseInt(hex.value, 16), hex);
+		}, false);
 
 
-
-
-
-	  dec = document.querySelector('.dec.input');
-	  dec.value = 0;
-	  
-	  dec.addEventListener('input', function() {
+		dec = document.querySelector('.dec.input');
+		dec.value = 0;
+		
+		dec.addEventListener('input', function() {
 	    updateValue(parseInt(dec.value, 10), dec);
-	  }, false);
+		}, false);
 
 
-
-
-	  bin = document.querySelector('.bin.input');
-	  bin.value = 0;
-	  
-	  bin.addEventListener('input', function() {
+		bin = document.querySelector('.bin.input');
+		bin.value = 0;
+		
+		bin.addEventListener('input', function() {
 	    updateValue(parseInt(bin.value, 2), bin);
-	  }, false);
+		}, false);
 
 
-
-
-
-	  ascii = document.querySelector('.ascii.input');
-}, false);
+	 	ascii = document.querySelector('.ascii.input');
+	}, false);
 
 //----------------------------
